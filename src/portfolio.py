@@ -72,6 +72,8 @@ class Portfolio:
         try:
             holdings_df = self.get_holdings()
             positions_df = self.get_positions()
+            available_margin = self.kite.margins()['equity']['available']['cash']
+      
             
             summary = {
                 "total_investment": holdings_df['average_price'].mul(holdings_df['quantity']).sum(),
@@ -84,6 +86,8 @@ class Portfolio:
                 (summary["current_value"] - summary["total_investment"]) 
                 / summary["total_investment"] * 100
             )
+
+            summary["available_margin"] = available_margin
             
             return summary
             

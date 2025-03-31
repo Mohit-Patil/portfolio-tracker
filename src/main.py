@@ -50,6 +50,8 @@ def display_portfolio():
     print(f"Current Value: ₹{summary['current_value']:,.2f}")
     print(f"Overall P&L: ₹{summary['total_pnl']:,.2f} ({summary['pnl_percentage']:.2f}%)")
     print(f"Day's P&L: ₹{summary['day_pnl']:,.2f}")
+    print(f"Available Margin: ₹{summary['available_margin']:,.2f}")
+    print(f"Total Account Value: ₹{summary['available_margin'] + summary['current_value']:,.2f}")
     
     # Get and display holdings
     print("\n=== Current Holdings ===")
