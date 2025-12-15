@@ -1,0 +1,7 @@
+kiteconnect
+python-dotenv
+pandas
+pytest
+pytest-mock 
+coverage
+Flask
